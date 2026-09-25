@@ -2,6 +2,42 @@ package com.programs.intermediate;
 
 import java.util.Scanner;
 
+/**
+ * Tiered Electricity Bill Calculator
+ *
+ * Concept:
+ * Most utility companies use a tiered (or slab-based) pricing model to encourage
+ * energy conservation. The more electricity you use, the higher the rate you pay
+ * for the units that spill over into the next tier.
+ *
+ * Pricing Slabs Used:
+ * - First 100 units (0 to 100): 5.00 per unit
+ * - Next 100 units (101 to 200): 7.00 per unit
+ * - Above 200 units (201+): 10.00 per unit
+ *
+ * Edge Cases Handled:
+ * - Negative Inputs: Validates that energy consumption cannot be less than 0.
+ *   If a negative number is entered, the program prints an error and returns 0.
+ *
+ * Example 1 (Tier 1 Only):
+ * Input:
+ *   Enter the unit of Electricity consumed: 80
+ * Output:
+ *   Electricity Bill: 400.00 (80 * 5), Total units used: 80
+ *
+ * Example 2 (Spills into Tier 2):
+ * Input:
+ *   Enter the unit of Electricity consumed: 150
+ * Output:
+ *   Electricity Bill: 850.00 (100*5 + 50*7), Total units used: 150
+ *
+ * Example 3 (Spills into Tier 3):
+ * Input:
+ *   Enter the unit of Electricity consumed: 250
+ * Output:
+ *   Electricity Bill: 1700.00 (100*5 + 100*7 + 50*10), Total units used: 250
+ */
+
 public class ElectricityBillCalculator {
     public static void main(String[] args) {
 
