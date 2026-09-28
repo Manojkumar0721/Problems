@@ -2,6 +2,32 @@ package com.programs.basic;
 
 import java.util.Scanner;
 
+/**
+ * Geometry Area Calculator (Interactive Menu)
+ *
+ * Concept:
+ * A unified mathematical utility that calculates the 2D surface area of seven
+ * standard geometric shapes. It utilizes a centralized menu system driven by
+ * modern Java switch expressions to route users to specific mathematical algorithms.
+ *
+ * Architecture & Best Practices:
+ * - Single Scanner Instance: Passes a single Scanner object by reference to helper
+ *   methods to prevent resource leaks and avoid accidentally closing System.in.
+ * - Double Precision: Uses 'double' for all dimensional inputs to accommodate
+ *   fractional measurements common in real-world geometry.
+ * - Defensive Programming: Validates that all physical dimensions are non-negative,
+ *   throwing an IllegalArgumentException if invalid bounds are provided.
+ *
+ * Supported Shapes & Formulas:
+ * 1. Circle: π * r²
+ * 2. Triangle: (b * h) / 2
+ * 3. Rectangle: l * w
+ * 4. Isosceles Triangle: (b * h) / 2
+ * 5. Parallelogram: b * h
+ * 6. Rhombus: (d1 * d2) / 2
+ * 7. Equilateral Triangle: (√3 / 4) * s²
+ */
+
 public class MathematicalCalculations {
 
     public static void main(String[] args) {
