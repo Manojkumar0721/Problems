@@ -66,9 +66,9 @@ public class KidsWithCandies {
         List<Boolean> result = new ArrayList<>(candies.length);
 
         // Pass 2: Test each kid to see if they can reach or beat the maximum
-        for(int i = 0; i < candies.length; i++){
+        for (int candy : candies) {
             // Simplification: Evaluate the expression and add the resulting boolean directly
-            result.add(candies[i] + extraCandies >= maxCandies);
+            result.add(candy + extraCandies >= maxCandies);
         }
 
         return result;
